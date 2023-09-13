@@ -55,7 +55,7 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 2. UPDATE all Ohio addresses to "REDACTED":
 
 3. All three DELETES
-
+use delete cascade instead
 * DELETE from usersContact
 
 
