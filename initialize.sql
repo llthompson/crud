@@ -16,6 +16,7 @@ CREATE TABLE usersContact (
   PRIMARY KEY (id),
   FOREIGN KEY (user_id)
   REFERENCES users (id)
+  ON DELETE CASCADE
 );
 
 CREATE TABLE usersAddress (
@@ -29,6 +30,7 @@ CREATE TABLE usersAddress (
   PRIMARY KEY (id),
   FOREIGN KEY (user_id)
   REFERENCES users (id)
+  ON DELETE CASCADE
 );
 
 INSERT INTO users

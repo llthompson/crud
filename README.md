@@ -50,12 +50,32 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 ## SQL Statements
 
 1. INSERT two users:
-
+```
+INSERT INTO users
+      (first_name, last_name)
+  VALUES
+      ('Linda', 'Belcher'),
+      ('Louise', 'Belcher');
+```
 
 2. UPDATE all Ohio addresses to "REDACTED":
+```
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE usersAddress
+set state = 'REDACTED'
+where state = 'OH';
+
+select * from usersAddress;
+```
 
 3. All three DELETES
-use delete cascade instead
+```
+DELETE from users
+where id = 114;
+```
+
+
 * DELETE from usersContact
 
 
